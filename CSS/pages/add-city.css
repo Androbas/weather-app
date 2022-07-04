@@ -1,0 +1,36 @@
+
+.item-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-city>p {
+    border-radius: 20px;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    align-self: normal;
+}
+
+.message.success { 
+    background-color: var(--color-success);
+    display: block;
+}
+
+.message.add-city-error {   
+    align-self: normal;
+    background-color: var(--color-error);
+    text-align: center;
+    display: block;
+}
+
+.message.warning {   
+    background-color: var(--color-warning);     
+    display: block;
+}
+
+.message {
+    display: none;
+}
