@@ -10,7 +10,7 @@ function getCitiesFromLocalStorage() {
 }
 
 async function consultAPI(cityName) {
-  let apiKey = "6cfae99f0e3ec73740b84a68b52d0398"; //cambiar por una propia
+  let apiKey = "df1223f46cbb9aee997a0d2b150e1b23"; //cambiar por una propia
   return fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric&lang=es`
   )
@@ -18,10 +18,10 @@ async function consultAPI(cityName) {
       if (response.ok) {return response.json()}
       else { throw new Error("error");};
     })
-    .then((data) => {
-      console.log("show data")
-      // showWeather(data);
-    })
+    // .then((data) => {
+    //   console.log("show data: ",data);
+    //   // showWeather(data);
+    // })
     .catch((error) => {
       return "error";
     });

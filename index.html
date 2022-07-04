@@ -38,8 +38,6 @@
                 <div class="item-form">
                     <select name="Seleccionar ciudad" id="seleccionable">
                         <option value="Seleccionar ciudad" disabled selected>Seleccionar ciudad</option>
-                        <!-- <option value="ROSARIO">Rosario</option>
-                        <option value="RAFAELA">Rafaela</option> -->
                     </select>
                     <button name="consultar" id="boton-consultar"> Consultar </button>
                 </div>
@@ -52,13 +50,13 @@
             <!-- Sección donde se debe mostrar el clima de la ciudad -->
             <div class="card" id="card-1">
                 <h3 class="city-name" id="city-name">Rosario</h3>
-                <img class="icon-img" width="100" height="100" src="http://openweathermap.org/img/wn/01d@2x.png" />
+                <img class="icon-img" id="weather-icon" width="100" height="100" src="http://openweathermap.org/img/wn/01d@2x.png" alt=""/>
 
-                <p><strong>Temperatura: <span id="temperature">13.76º</span></strong></p>
-                <p><strong>Sensación térmica: <span id="sensation">12.91º</span></strong></p>
-                <p><strong>Humedad: <span id="humidity">66%</span></strong></p>
-                <p><strong>Velocidad del viento: <span class="wind">2.06km/h</span></strong></p>
-                <p><strong>Presión: <span class="pressure">1024 P</span></strong></p>
+                <p><strong>Temperatura: <span id="temperature">13.76</span>º</strong></p>
+                <p><strong>Sensación térmica: <span id="sensation">12.91</span>º</strong></p>
+                <p><strong>Humedad: <span id="humidity">66</span>%</strong></p>
+                <p><strong>Velocidad del viento: <span id="wind">2.06</span>km/h</strong></p>
+                <p><strong>Presión: <span id="pressure">1024</span> P</strong></p>
             </div>
         </section>
     </main>

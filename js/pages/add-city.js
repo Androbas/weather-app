@@ -16,19 +16,21 @@ function setResultMessage(result){
   if (result == "success") {
     message.innerHTML = "Ciudad añadida";
     message.classList.add("success");
-    message.classList.remove(["warning", "add-city-error"]);
+    message.classList.remove("warning", "add-city-error");
   } else if (result == "warning") {
     message.innerHTML = "Ciudad ya existe en la lista";
     message.classList.add("warning");
-    message.classList.remove(["success", "add-city-error"]);
+    message.classList.remove("success", "add-city-error");
   } else {
     message.innerHTML = "Ciudad no existe";
     message.classList.add("add-city-error");
-    message.classList.remove(["success", "warning"]);
+    message.classList.remove("success", "warning");
   }
 }
 
 async function setCityToLocalStorage() {
+  let button = document.getElementById('boton-agregar');
+  button.disabled = true;
   const city = document.getElementById("add-city-place").value;
   const uppercaseCity = city.toUpperCase();
   const result = await cityValidation(uppercaseCity);
@@ -38,6 +40,7 @@ async function setCityToLocalStorage() {
     localStorage.setItem("CITIES", JSON.stringify(cities));
   }
   setResultMessage(result);
+  button.disabled = false;
 }
 
 document.getElementById("boton-agregar").addEventListener("click", function(event){
