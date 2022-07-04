@@ -10,7 +10,7 @@ function getCitiesFromLocalStorage() {
 }
 
 async function consultAPI(cityName) {
-  let apiKey = "df1223f46cbb9aee997a0d2b150e1b23"; //cambiar por una propia
+  let apiKey = ""; //cambiar por una propia
   return fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric&lang=es`
   )
