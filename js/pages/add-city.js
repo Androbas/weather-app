@@ -29,6 +29,7 @@ function setResultMessage(result){
 }
 
 async function setCityToLocalStorage() {
+  showLoader();
   let button = document.getElementById('boton-agregar');
   button.disabled = true;
   const city = document.getElementById("add-city-place").value;
@@ -41,6 +42,7 @@ async function setCityToLocalStorage() {
   }
   setResultMessage(result);
   button.disabled = false;
+  hideLoader();
 }
 
 document.getElementById("boton-agregar").addEventListener("click", function(event){

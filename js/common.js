@@ -26,3 +26,15 @@ async function consultAPI(cityName) {
       return "error";
     });
 }
+
+function showLoader(){
+  let loader = document.getElementById('loader');
+  loader.classList.add('display-block');
+  loader.classList.remove('display-none');
+}
+
+function hideLoader(){
+  let loader = document.getElementById('loader');
+  loader.classList.add('display-none');
+  loader.classList.remove('display-block');
+}

@@ -8,6 +8,7 @@ function setCitiesList (cities) {
   }
 }
 async function showCityDetails () {
+  showLoader();
   let cityName = document.getElementById('seleccionable').value;
   const res = await consultAPI(cityName);
   let city = document.getElementById('city-name');
@@ -28,7 +29,7 @@ async function showCityDetails () {
   let card = document.getElementById('section-weather-result');
   card.classList.add('display-block');
   card.classList.remove('display-none');
-  console.log(res);
+  hideLoader();
 }
 
 (function(){
